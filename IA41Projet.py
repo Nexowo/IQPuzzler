@@ -32,7 +32,7 @@ if -1<choix<41:
                [0,0,0,0,0,0,0,0,0,0,0],
                [0,0,0,0,0,0,0,0,0,0,0]] #Configuration de base du plateau 1 sous la forme d'un tableau à 2 dimensions
 
-    with open('C:/Users/lebla/Desktop/Plateaux1.txt','r') as file1: #Ouverture du fichier des problèmes du plateau 1
+    with open('./Plateaux1.txt','r') as file1: #Ouverture du fichier des problèmes du plateau 1
         for _ in range(3*choix+1): #Choix du problème choisi par l'utilisateur
             next(file1)
         temp = file1.readline() #Lecture du problème choisi
@@ -67,7 +67,7 @@ else:
 
         probleme = choix - 100
     
-        with open('C:/Users/lebla/Desktop/Plateaux2.txt','r') as file2: #Ouverture du fichier des problèmes du plateau 2
+        with open('./Plateaux2.txt','r') as file2: #Ouverture du fichier des problèmes du plateau 2
             for _ in range(3*probleme+1): #Choix du problème choisi par l'utilisateur
                 next(file2)
             temp = file2.readline() #Lecture du problème choisi      
