@@ -1,3 +1,10 @@
+import os
+import sys
+
+#Définition des PATH relatifs du projet
+absolutepath = os.path.abspath(__file__)
+fileDirectory = os.path.dirname(absolutepath)
+
 #Définition de la forme de chaque pièce sous la forme d'un tableau à double dimensions en choisissant des 0 pour les cases correspondant à des vides sur les jeux réels et un string pour les cases correspondant à des pleins.
 #Les string changent en fonction des pièces pour les reconnaître
 Rouge = [["R","R","R","R"],["R",0,0,0]]
@@ -25,14 +32,14 @@ while choix<-1 or 41<choix<99 or choix>140:
     choix = int(input('Votre choix : '))
 
 if -1<choix<41:
-
+    
     Plateau = [[0,0,0,0,0,0,0,0,0,0,0],
                [0,0,0,0,0,0,0,0,0,0,0],
                [0,0,0,0,0,0,0,0,0,0,0],
                [0,0,0,0,0,0,0,0,0,0,0],
                [0,0,0,0,0,0,0,0,0,0,0]] #Configuration de base du plateau 1 sous la forme d'un tableau à 2 dimensions
 
-    with open('./Plateaux1.txt','r') as file1: #Ouverture du fichier des problèmes du plateau 1
+    with open(os.path.join(fileDirectory, 'Plateaux1.txt'),'r') as file1: #Ouverture du fichier des problèmes du plateau 1
         for _ in range(3*choix+1): #Choix du problème choisi par l'utilisateur
             next(file1)
         temp = file1.readline() #Lecture du problème choisi
@@ -67,7 +74,7 @@ else:
 
         probleme = choix - 100
     
-        with open('./Plateaux2.txt','r') as file2: #Ouverture du fichier des problèmes du plateau 2
+        with open(os.path.join(fileDirectory, 'Plateaux2.txt'),'r') as file2: #Ouverture du fichier des problèmes du plateau 2
             for _ in range(3*probleme+1): #Choix du problème choisi par l'utilisateur
                 next(file2)
             temp = file2.readline() #Lecture du problème choisi      
