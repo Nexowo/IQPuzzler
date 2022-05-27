@@ -1,5 +1,4 @@
 import os
-import sys
 
 #Définition des PATH relatifs du projet
 absolutepath = os.path.abspath(__file__)
