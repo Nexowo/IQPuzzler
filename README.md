@@ -1,7 +1,9 @@
 # IQPuzzler
 Bruteforce algorithm to complete IQPuzzler
-By: Jean Maccou
-Thanks to: Cyril Obrecht and Florian Leblanc
+
+Author: Jean Maccou
+
+Contributors: Cyril Obrecht and Florian Leblanc
 
 FR
 
