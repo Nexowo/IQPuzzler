@@ -3,7 +3,7 @@ Bruteforce algorithm to complete IQPuzzler
 
 Author: Jean Maccou
 
-Thaks to: Cyril Obrecht and Florian Leblanc
+Thanks to: Cyril Obrecht and Florian Leblanc
 
 FR
 
