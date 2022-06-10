@@ -5,6 +5,8 @@ Author: Jean Maccou
 
 Thanks to: Cyril Obrecht and Florian Leblanc
 
+### WiP : modifications in order to make it object oriented, the working python file is on PlacerPieces.py
+
 FR
 
 Ce projet vous propose un code permettant de résoudre le problème du jeu de société IQPuzzler de manière recursive.
