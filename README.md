@@ -5,7 +5,7 @@ Author: Jean Maccou
 
 Thanks to: Cyril Obrecht and Florian Leblanc
 
-### WiP : modifications in order to make it object oriented, the working python file is on PlacerPieces.py
+### WiP : modifications in order to make it object oriented, the working python file is on SolverIQPuzzler.py
 
 FR
 
