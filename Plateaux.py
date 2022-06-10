@@ -1,5 +1,5 @@
-from csv import list_dialects
 from typing import List, Tuple
+from Piece import Piece
 
 class Plateaux:
     def __init__(self, plateau : list) -> None:
@@ -43,6 +43,15 @@ class Plateaux:
             result.append(count)
             i, j = self.__first_zero_in(plateau)
         return result
+
+    def placer_piece(self, piece : Piece, x : int, y : int) -> None:
+        new_plat = self.get_plateau()
+        piece_copy = piece.get_piece()
+        for i in range(len(piece_copy)):
+            for j in range(len(piece_copy[i])):
+                if piece_copy[i][j] != 0:
+                    new_plat[i + x][j + y] = 1
+        self.__plateaux = new_plat
 
     @staticmethod
     def __first_zero_in(plateau : list) -> Tuple(int, int):

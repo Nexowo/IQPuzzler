@@ -16,7 +16,10 @@ class Piece:
         """
         :return: a 2 dimentional array that represents the piece.
         """
-        return self.__piece
+        piece_copy = []
+        for line in self.__piece:
+            piece_copy = line.copy()
+        return piece_copy
 
     def is_transposable(self) -> bool:
         """
