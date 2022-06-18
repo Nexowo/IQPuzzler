@@ -1,9 +1,9 @@
 # IQPuzzler
 Bruteforce algorithm to complete IQPuzzler
 
-Author: Jean Maccou
+Author: <a href="https://github.com/Nexowo">Jean Maccou</a>
 
-Thanks to: Cyril Obrecht and Florian Leblanc
+Thanks to: <a href="https://github.com/galyfray">Cyril Obrecht</a> and <a href="https://github.com/Folaste">Florian Leblanc</a>
 
 ### WiP : modifications in order to make it object oriented, the working python file is on SolverIQPuzzler.py
 
