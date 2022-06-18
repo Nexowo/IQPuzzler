@@ -1,9 +1,17 @@
 from typing import List, Tuple
 from Piece import Piece
 
+""" This class is used to represent the gameboard of IQPuzzler.
+It is composed of a double dimention list where 0 is a empty space, X is a non disponible space and any other caracter is a piece.
+@Author: Jean Maccou
+"""
+
 class Plateaux:
     def __init__(self, plateau : list) -> None:
-        self.__plateaux = plateau
+        """ Constructor of the plateau, we copy the new plateau in the private attribute __plateaux."""
+        self.__plateaux = []
+        for line in plateau:
+            self.__plateaux.append(line.copy())
 
     def __str__(self) -> str:
         strself = ''
@@ -14,12 +22,14 @@ class Plateaux:
         return strself
 
     def get_plateau(self) -> list:
+        """:return: a double dimentional list that is a copy of the plateau"""
         new_plateaux = []
         for line in self.__plateaux:
             new_plateaux.append(line.copy())
         return new_plateaux
 
     def count_holes(self) -> List(int):
+        """:return: a list of int, where the size of the list is the number of holes in the plateau and the values is the size of the different holes."""
         plateau = self.get_plateau()
         pile = []
         result = []
@@ -45,6 +55,11 @@ class Plateaux:
         return result
 
     def placer_piece(self, piece : Piece, x : int, y : int) -> None:
+        """ Place a piece on the board.
+        :param piece: the piece to place on the board.
+        :param x: the x coordiante to place the top left corner of the piece.
+        :param y: the y coordiante to place the top left corner of the piece.
+        """
         new_plat = self.get_plateau()
         piece_copy = piece.get_piece()
         for i in range(len(piece_copy)):
@@ -55,6 +70,9 @@ class Plateaux:
 
     @staticmethod
     def __first_zero_in(plateau : list) -> Tuple(int, int):
+        """Static method that find the first zero in the board and return the coordinates of this one.
+        :param plateau: the board to search in.
+        ;return: a tuple of cordinates of the first zero in the board, or (-1, -1) if there is no zero in the board."""
         for i in range(len(plateau)):
             for j in range(len(plateau[i])):
                 if plateau[i][j] == 0:
