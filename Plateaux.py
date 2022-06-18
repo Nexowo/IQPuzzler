@@ -28,7 +28,7 @@ class Plateaux:
             new_plateaux.append(line.copy())
         return new_plateaux
 
-    def count_holes(self) -> List(int):
+    def count_holes(self) -> List[int]:
         """:return: a list of int, where the size of the list is the number of holes in the plateau and the values is the size of the different holes."""
         plateau = self.get_plateau()
         pile = []
@@ -69,7 +69,7 @@ class Plateaux:
         self.__plateaux = new_plat
 
     @staticmethod
-    def __first_zero_in(plateau : list) -> Tuple(int, int):
+    def __first_zero_in(plateau : list) -> Tuple[int, int]:
         """Static method that find the first zero in the board and return the coordinates of this one.
         :param plateau: the board to search in.
         ;return: a tuple of cordinates of the first zero in the board, or (-1, -1) if there is no zero in the board."""
