@@ -1,4 +1,3 @@
-from email.errors import StartBoundaryNotFoundDefect
 from typing import List
 from Piece import Piece
 from Plateaux import Plateaux
