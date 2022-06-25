@@ -54,19 +54,23 @@ class Plateaux:
             i, j = self.__first_zero_in(plateau)
         return result
 
-    def placer_piece(self, piece : Piece, x : int, y : int) -> None:
-        """ Place a piece on the board.
+    def place_piece(self, piece : Piece, x : int, y : int) -> bool:
+        """ Test if a piece can be placed on a board, and place it.
         :param piece: the piece to place on the board.
         :param x: the x coordiante to place the top left corner of the piece.
         :param y: the y coordiante to place the top left corner of the piece.
+        :return: True if the piece can be placed, false otherwise
         """
         new_plat = self.get_plateau()
         piece_copy = piece.get_piece()
         for i in range(len(piece_copy)):
             for j in range(len(piece_copy[i])):
+                if new_plat[i + x][j + y] != 0 and piece_copy[i][j] != 0:
+                    return False
                 if piece_copy[i][j] != 0:
-                    new_plat[i + x][j + y] = 1
+                    new_plat[i + x][j + y] = piece_copy[i][j]
         self.__plateaux = new_plat
+        return True
 
     @staticmethod
     def __first_zero_in(plateau : list) -> Tuple[int, int]:

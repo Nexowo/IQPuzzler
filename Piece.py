@@ -11,6 +11,12 @@ class Piece:
         """
         self.__piece = piece
         self.__transpose = transpose
+        size = 0
+        for line in piece:
+            for elem in line:
+                if elem != 0:
+                    size+=1
+        self.__size = size
 
     def get_piece(self) -> list:
         """
@@ -39,6 +45,12 @@ class Piece:
         """
         assert self.__transpose
         self.__piece = [[self.__piece[row][col] for row in range(0,len(self.__piece))] for col in range(0,len(self.__piece[0]))]
+
+    def get_size(self) -> int:
+        """
+        :return: the size of the piece
+        """
+        return self.__size
 
     def __str__(self) -> str:
         strself = ''
